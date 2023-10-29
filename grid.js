@@ -4,6 +4,7 @@ let cols = 26;
 let columns = document.querySelector('.grid-row-container');
 let allRows = document.querySelector('.grid-col-cell-address');
 let cellsCont = document.querySelector('.grid-col-container');
+let addressBar = document.querySelector('.address-bar');
 
 for (let i = 0; i < rows; i++) {
   let col_grid = document.createElement('div');
@@ -26,6 +27,10 @@ for (let i = 0; i < rows; i++) {
     let cell = document.createElement('div');
     cell.setAttribute('class', 'excel-grid-cell');
     cell.setAttribute('contenteditable', 'true');
+    cell.setAttribute('spellcheck', false);
+    // for cell and storage identification attributes
+    cell.setAttribute('rid', i);
+    cell.setAttribute('cid', j);
     rowCount.appendChild(cell);
     addListnerForAddressBar(cell, i, j)
   }
@@ -37,3 +42,8 @@ function addListnerForAddressBar(cell, i, j){
     document.querySelector('.address-bar').value = `${String.fromCharCode(65 + j)} ${i+1}`;
   })
 }
+
+// by default click on first-cell
+
+let firstCell = document.querySelector('.excel-grid-cell');
+firstCell.click();

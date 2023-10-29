@@ -34,40 +34,48 @@
             content_paste
         </span>
         <select class="font_family_select">
-            <option>Lato sans</option>
-            <option>Newton</option>
-            <option>Arial</option>
+            <option value="Lato">Lato</option>
+            <option value="Newton">Newton</option>
+            <option value="Arial">Arial</option>
         </select>
         <select class="font_size_select">
-            <option>12</option>
-            <option>14</option>
-            <option>16</option>
-            <option>18</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
         </select>
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined bold">
             format_bold
         </span>
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined italic">
             format_italic
         </span>
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined underline">
             format_underlined
         </span>
-        <span class="material-symbols-outlined">
+        <span class="left material-symbols-outlined alignment">
             format_align_left
         </span>
-        <span class="material-symbols-outlined">
+        <span class="center material-symbols-outlined alignment" >
             format_align_center
         </span>
-        <span class="material-symbols-outlined">
+        <span class="right material-symbols-outlined alignment">
             format_align_right
         </span>
-        <span class="material-symbols-outlined">
-            format_color_text
-        </span>
-        <span class="material-symbols-outlined">
-            format_color_fill
-        </span>
+        <div class="color_prop">
+            <span class="material-symbols-outlined">
+                format_color_text
+            </span>
+            <input type="color" class="font-color-prop"/>
+        </div>
+
+        <div class="color_prop">
+            <span class="material-symbols-outlined">
+                format_color_fill
+            </span>
+            <input type="color" class="bg-color-prop"/>
+        </div>
+       
     </div>
 
     <div class="excel-formula-cont">
@@ -99,6 +107,7 @@
     </div>
 </body>
 
-<script src="./script.js"></script>
+<script src="./grid.js"></script>
+<script src="./cell-properties.js"></script>
 
 </html>
